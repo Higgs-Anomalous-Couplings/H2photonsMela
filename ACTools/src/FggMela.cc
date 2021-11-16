@@ -11,7 +11,7 @@
 #include <TTree.h>
 #include <TChain.h>
 
-#include "interface/FggMelaFriendTree.hh"
+#include "FggMelaFriendTree.hh"
 
 using namespace std;
 

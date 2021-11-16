@@ -1,8 +1,11 @@
 #define FggTreeBase_cxx
-#include "interface/FggTreeBase.hh"
+#include "FggTreeBase.hh"
 #include <TH2.h>
 #include <TStyle.h>
 #include <TCanvas.h>
+#include <iostream>
+
+using namespace std;
 
 void FggTreeBase::Loop()
 {
@@ -38,6 +41,7 @@ void FggTreeBase::Loop()
       Long64_t ientry = LoadTree(jentry);
       if (ientry < 0) break;
       nb = fChain->GetEntry(jentry);   nbytes += nb;
+      std::cout << "Test nLHE part = " << nLHEPart << std::endl;
       // if (Cut(ientry) < 0) continue;
    }
 }
